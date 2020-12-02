@@ -7,8 +7,7 @@
 /*Nastavení box-sizing: border-box, takže šířka elementu, = content + padding + border a nastavení 
 základní výšky řádku pro všechny prohlížeče*/
 html {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   line-height: 1.5;
 }
 
@@ -16,8 +15,7 @@ html {
 *,
 *:before,
 *:after {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 /*Odstranění marginu elementu body*/
@@ -76,7 +74,6 @@ h1 {
   text-transform: uppercase;
   line-height: 1.2;
   padding: 20px 0;
-  -webkit-transition: background 600ms;
   transition: background 600ms;
 }
 
@@ -107,7 +104,6 @@ h1 {
   letter-spacing: 1px;
   font-size: inherit;
   border-radius: 0;
-  -webkit-transition: background 250ms;
   transition: background 250ms;
 }
 
@@ -124,28 +120,19 @@ h1 {
 .container {
   position: absolute;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   overflow: hidden;
   height: 440px;
   max-height: 440px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 .gameArea {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   width: 600px;
   margin: 20px auto;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 .gameArea .square {
@@ -154,7 +141,6 @@ h1 {
   padding-bottom: 30%;
   margin: 1.66%;
   border-radius: 15%;
-  -webkit-transition: background 600ms, opacity 300ms;
   transition: background 600ms, opacity 300ms;
 }
 
@@ -163,26 +149,17 @@ h1 {
 }
 
 aside {
-  -webkit-transition: 2s cubic-bezier(0.23, 1, 0.32, 1);
   transition: 2s cubic-bezier(0.23, 1, 0.32, 1);
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
   position: absolute;
   right: 50px;
   background-color: #232323;
   width: 100%;
   height: 100%;
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
+  transform: translateX(100%);
 }
 
 aside button {
@@ -193,13 +170,11 @@ aside button {
   outline: none;
   font-size: 2em;
   width: 50px;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
+  flex-shrink: 0;
 }
 
 aside button:hover {
   color: white;
-  -webkit-transition: 250ms;
   transition: 250ms;
 }
 
@@ -228,35 +203,29 @@ aside .space {
 }
 
 .resize-animation-stopper * {
-  -webkit-transition: none;
   transition: none;
 }
 
 .hintToggle {
-  -webkit-transform: translateX(50px);
-          transform: translateX(50px);
+  transform: translateX(50px);
 }
 
 @media screen and (max-width: 630px) {
   h1 {
-    font-size: 1.5em;
+    font-size: 1.3em;
   }
   h1 #colorDisplay {
-    font-size: 1.6em;
+    font-size: 1.4em;
   }
   .stripe {
-    font-size: 1.2em;
+    font-size: .8em;
   }
   .gameArea {
     width: 95%;
   }
   aside {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-transform: translateX(0) translateY(100vh);
-            transform: translateX(0) translateY(100vh);
+    flex-direction: column;
+    transform: translateX(0) translateY(100vh);
     right: auto;
     bottom: 50px;
     width: 100%;
@@ -274,8 +243,6 @@ aside .space {
     width: 30%;
   }
   .hintToggle {
-    -webkit-transform: translateY(50px);
-            transform: translateY(50px);
+    transform: translateY(50px);
   }
 }
-/*# sourceMappingURL=style.css.map */
