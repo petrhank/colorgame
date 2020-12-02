@@ -1,0 +1,185 @@
+@import "partials/_core.scss";
+@import "partials/_variables.scss";
+@import "partials/_mixins.scss";
+
+body{
+    background-color: $backgroundColor;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+h1{
+    color: $contrastTextColor;
+    text-align: center;
+    background-color: $mainColor;
+    font-weight: normal;
+    margin: 0;
+    text-transform: uppercase;
+    line-height: 1.2;
+    padding: 20px 0;
+    transition: background 600ms;
+}
+
+#colorDisplay{
+    font-size: 2em;
+}
+
+.stripe{
+    background-color: white;
+    height: 2em;
+    text-align: center;
+    color: black;
+    .selected{
+        background: $mainColor;
+        color: $contrastTextColor;
+    }
+    button{
+        @include button;
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 1px;
+        font-size: inherit;
+        border-radius: 0;
+        transition: background 250ms;
+        
+        &:hover{
+            background: $mainColor;
+            color: $contrastTextColor;
+        }
+    }
+}
+
+#message{
+    display: inline-block;
+    width: 20%;
+}
+
+.container{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    height: 440px;
+    max-height: 440px;
+    align-items: center;
+}
+
+.gameArea{
+    display: flex;
+    flex-wrap: wrap;
+    width: 600px;
+    margin: 20px auto;
+    align-items: center;
+    .square{
+        width: 30%;
+        background: purple;
+        padding-bottom: 30%;
+        margin: 1.66%;
+        border-radius: 15%;
+        transition: background 600ms, opacity 300ms;
+
+    }
+}
+
+.hidden{
+    visibility: hidden;
+}
+
+
+
+
+aside{
+    
+    transition: 2s cubic-bezier(0.23, 1, 0.320, 1); 
+    display:flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    right: 50px;
+    background-color: $backgroundColor;
+    width: 100%;
+    height: 100%;
+    transform: translateX(100%);
+
+    button{
+        @include button;
+
+        font-size: 2em;
+        width: 50px;
+        flex-shrink: 0;
+
+        &:hover{
+            color: $contrastTextColor;
+            transition: 250ms;
+        }
+    }
+    .hintText{
+        color: $contrastTextColor;
+        width: 550px;
+        min-width: 550px;
+        text-align: center;
+        ul{
+            list-style-type: none;
+            padding: 0;
+            .dot{
+                font-size: 2em;
+            }
+        }
+    }
+    img{
+        height: 50%;
+    }
+    .space{
+        width: 50px;
+    }
+
+}
+
+.resize-animation-stopper * {
+    transition: none;
+  }
+
+.hintToggle{
+    transform: translateX(50px);
+}
+
+@media screen and (max-width: 630px){
+    h1{
+        font-size: 1.5em;
+        #colorDisplay{
+            font-size: 1.6em;
+        }
+    }
+    .stripe{
+        font-size: 1.2em;
+    }
+    .gameArea{
+        width: 95%;
+    }
+
+    aside{
+        flex-direction: column;
+        transform: translateX(0) translateY(100vh);
+        right: auto;
+        bottom: 50px;
+        width: 100%;
+        position: fixed;
+        button{
+            height: 50px;
+        }
+        .hintText{
+            width: 95%;
+            min-width: auto;
+        }
+        img{
+            height: auto;
+            width: 30%;
+        }
+    }
+    .hintToggle{
+        transform: translateY(50px);
+    }
+}
+
+

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<!-- info -->
+    <meta charset="utf-8">
+    <meta name="description" content="popis webu">
+    <meta name="author" content="Petr Hank">
+    <title>COLOR GAME</title>
+<!--  -->
+    <meta name="google" content="notranslate"> <!-- Vypíná nabídku překladu v Google Chrome -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<!-- fonts -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+
+
+<!-- style -->
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="shortcut icon" type="image/jpg" href="img/favicon.png">
+
+</head>
+<body>
+    <h1>The Great 
+        <br>
+        <span id="colorDisplay">RGB</span> 
+        <br>
+    Color Game</h1>
+
+    <div class="stripe">
+        <button id="reset">New Colors</button>
+        <span id="message"></span>
+        <button class="mode">Easy</button>
+        <button class="mode selected">Hard</button>
+    </div>
+<div class="container">
+    <div class="gameArea">
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div> 
+    </div>
+    <aside>
+        <button id="hintBtn"><i class="far fa-lightbulb"></i></button>
+        <div class="hintText">
+            <ul>
+                <li>The RGB color model utilizes the additive model in which red, green, and blue light are combined in various ways to create other colors.</li>
+                <li class="dot">&bull;</li>
+                <li>When written, RGB values are commonly specified using three integers between 0 and 255, each representing red, green, and blue intensities, in that order.</li>
+                <li class="dot">&bull;</li>
+                <li>Your goal is to guess, which of shown colors represents the color written in the RGB code above.</li>
+            </ul>
+
+        </div>
+        <img src="img/RGBmodel.png" alt="rgb model">
+        <div class="space"></div>
+    </aside>
+</div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
